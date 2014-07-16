@@ -1,12 +1,17 @@
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Blog phanstasmal	
+email: phanstasmal@gmail.com
+description: "Đú đởn cùng bạn bè :3"
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://phanstasmal.github.io"
+twitter_username: phanstasmal
+github_username:  phanstasmal
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+image_avatar: https://avatars1.githubusercontent.com/u/7008520?s=460
