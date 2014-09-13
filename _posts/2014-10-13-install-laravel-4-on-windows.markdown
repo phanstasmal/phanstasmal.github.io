@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hướng dẫn cài đặt Laravel 4 trên windows"
-date:   2014-10-41 10:41:00
+date:   2014-10-13 10:41:00
 categories: jekyll update
 ---
 
