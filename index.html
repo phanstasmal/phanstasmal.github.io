@@ -4,51 +4,43 @@ layout: default
 
 <div class="home col-md-12 container">
 
-  {% for post in site.posts %}
-    <div class="row row-index">
-      <div class="col-md-1">
-        <div class="row">
-          <div class="date-box"><span>{{ post.date | date: "%b %-d" }}</span></div>
-        </div>
-        <div class="row">
-          <div class="year-box"><span>{{ post.date | date: "%Y" }}</span></div>
-        </div>
-      </div>
-      <div class="col-md-11">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <div>
-          {{ post.excerpt }}
-        </div>
+  {% for post in site.posts %}    
+    <div class="row">
+      <div class="row col-md-2"> 
+          <h4><span class="label label-info"><span class="glyphicon glyphicon-cloud"></span> {{ post.date | date: "%-d %b %Y" }}</span></h4>
+      </div>    
+      <div class="col-md-10 row-content">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a>
       </div>
     </div>
   {% endfor %}
   <div class="row">
   <ul class="pager"> 
   {% if paginator.previous_page %}
-  <li class="previous">
+  <li class="">
     {% if paginator.previous_page == 1 %}
-    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
+    <a href="{{ site.BASE_PATH }}/"><span class="glyphicon glyphicon-hand-left"></span></a>
     {% else %}
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
+    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}"><span class="glyphicon glyphicon-hand-left"></span></a>
     {% endif %}
   </li>
   {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
+  <li class=" disabled">
+    <a><span class="glyphicon glyphicon-hand-left"></span></a>
   </li>
   {% endif %}
   
   <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page_number">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   </li>
 
   {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
+  <li class="">
+    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}"><span class="glyphicon glyphicon-hand-right"></span></a>
   </li>
   {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>        
+  <li class="disabled">
+    <a><span class="glyphicon glyphicon-hand-right"></span></a>        
   </li>
   {% endif %}
   </ul>

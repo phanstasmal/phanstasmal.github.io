@@ -12,14 +12,14 @@ html, body {
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
     font-weight: 300;
     background-color: #F9F9F9;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
+    font-size: 90%;
     font-weight: 400;
 }
 
@@ -60,6 +60,15 @@ a:visited {
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
+
+.row-content {
+    line-height:40px;
+}
+
+.pager li > a, .pager li > span {
+    border-radius: 3px !important;
+    background-color: #DDDDDD !important;
+}
 
 /* Site Right bar*/
 
