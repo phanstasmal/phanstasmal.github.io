@@ -2,9 +2,9 @@ paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
 
 # Site settings
-title: Blog phanstasmal	
+title: phanstasmal	
 email: phanstasmal@gmail.com
-description: "Đú đởn cùng bạn bè :3"
+description: ":3"
 baseurl: ""
 url: "http://phanstasmal.github.io"
 twitter_username: phanstasmal
