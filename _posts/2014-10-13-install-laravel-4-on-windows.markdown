@@ -5,18 +5,18 @@ date:   2014-10-13 10:41:00
 categories: jekyll update
 ---
 
-###Yêu cầu hệ thống:
+####Yêu cầu hệ thống:
 -	PHP >= 5.4
 -	MCrypt PHP Extension
 
-###Cài đặt Web Server xampp:
+####Cài đặt Web Server xampp:
 -	Ở đây mình sử dụng gói xampp Download Xampp for Windows
 	Link: `https://www.apachefriends.org/index.html`
 Sau khi cài đặt xampp, start 2 module Apache và MySQL
 
 ![alt text](http://i.imgur.com/siJNvJU.png)
 
-###Cài đặt laravel:
+####Cài đặt laravel:
 Cài đặt laravel từ composer
 -	Download composer tại địa chỉ: `https://getcomposer.org/download/`
 -	Sau khi download về ta tiến hành cài đặt composer
@@ -71,3 +71,5 @@ Mặc định sẽ là :
 `http://localhost/lrvexample/public/`
 
 ![alt text](http://i.imgur.com/frKRHvH.png)
+
+End.
