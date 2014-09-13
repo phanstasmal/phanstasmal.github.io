@@ -72,7 +72,7 @@ a:visited {
 }
 
 .avatar {
-    margin-top: 70px;
+    margin-top: 30px;
     width: 150px;
     border: 1px solid #DA6426;
 }
@@ -83,8 +83,8 @@ a:visited {
 
 .title-bar {
     text-align: center;
-    color: #FFFFFF;
-    display: none;
+    color: #F5F5F5;
+    //display: none;
 }
 
 .title-bar a {
