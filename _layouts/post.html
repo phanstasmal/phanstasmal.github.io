@@ -19,6 +19,6 @@ layout: default
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
   </article>
-  <div class="fb-comments" data-href="http://phanstasmal.github.io/" data-width="600" data-numposts="10" data-colorscheme="light"></div>
+  <div class="fb-comments" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-width="600" data-numposts="10" data-colorscheme="light"></div>
 
 </div>
