@@ -11,7 +11,7 @@ MySQL là hệ quản trị cơ sở dữ liệu miễn phí được sử dụn
 
 Nhưng ta nên dùng InnoDB,MyISAM hay MEMORY ? Tại sao lại như thế ? Bài viết này sẽ giúp các bạn nắm được cách hoạt động của các Storage Engine này. Từ đó có thể biết được cách chọn loại phù hợp khi xây dựng website của mình để hiệu suất và độ ổn định đạt được cao nhất.
 
-###1. MyISAM 
+####1. MyISAM 
 
 Đây là kiểu Storage Engine mặc định khi tạo bảng và được dùng phổ biết nhất. Storage Engine này cho phép lập chỉ mục toàn cột (Full Text Index). Do đó, Storage Engine này cho tốc độ truy suất (Đọc và tìm kiếm) nhanh nhất trong các Storage Engine.
 
@@ -23,9 +23,9 @@ Làm sao để chuyển 1 bảng từ Storage Engine khác (VD: InnoDB) sang MyI
 Bạn có thể dùng truy vấn sau:
 'ALTER TABLE table_name ENGINE = MyISAM;''
 
-###2. InnoDB
+####2. InnoDB
 
-- Đây là kiểu Storage Engine mới hơn MyISAM. Storage Engine này không hỗ trợ Full Text Index như MyISAM (Tin mừng là sắp có hỗ trợ ở các phiên bản mới, hiện tại đã có beta rồi ) nhưng hỗ trợ quan hệ giữa các bảng (Khóa ngoại). Do đó, kiểu Storage này kiểm tra tính toàn vẹn dữ liệu và ràng buộc rất cao => Khó sảy ra tình trạng hỏng chỉ mục và Crash như MyISAM.
+Đây là kiểu Storage Engine mới hơn MyISAM. Storage Engine này không hỗ trợ Full Text Index như MyISAM (Tin mừng là sắp có hỗ trợ ở các phiên bản mới, hiện tại đã có beta rồi ) nhưng hỗ trợ quan hệ giữa các bảng (Khóa ngoại). Do đó, kiểu Storage này kiểm tra tính toàn vẹn dữ liệu và ràng buộc rất cao => Khó sảy ra tình trạng hỏng chỉ mục và Crash như MyISAM.
 
 Ngoài ra, kiểu Storage Engine này hoạt động theo cơ chế Row Level Locking nên khi cập nhật (Thêm,xóa,sửa) 1 bảng thì chỉ có bản ghi đang bị thao tác bị khóa mà thôi, các hoạt động khác trên table này vẫn diễn ra bình thường.
 
@@ -41,7 +41,7 @@ Bạn có thể dùng truy vấn sau:
 (Lưu ý là nếu trước đó table này dùng MyISAM mà có cột nào đặt Full Text Index thì bạn phải xóa Full Text Index trên cột đó đi mới có thể chuyển được)
 
 
-###3. MEMORY 
+####3. MEMORY 
 
 Đây là kiểu Storage Engine được lưu trữ dữ liệu trực tiếp lên RAM nên tốc độ truy xuất và cập nhật rất nhanh. Vì thế, nó được dùng làm các table chứa dữ liệu tạm, chứa các phiên làm việc của user...
 
@@ -51,7 +51,7 @@ MEMORY sử dụng cơ chế table-level locking như MyISAM.
 Dung lượng của 1 bảng Storage Engine dạng MEMORY tối đa là bao nhiêu ?
 Nó phụ thuộc vào cấu hình thông số max_heap_table_size trong file my.cnf, mặc định 1 bảng kiểu MEMORY có dung lượng tối đa là 16MB. Nếu vượt quá bạn sẽ nhận được lỗi: Table xyz is full...
 
-###4. So sánh các đặc điểm của InnoDB vs MyISAM
+####4. So sánh các đặc điểm của InnoDB vs MyISAM
 
 - InnoDB hỗ trợ relationship (data integrity and foreign key constraints) còn MyISAM thì ko: Đa phần các open source đều không coi trọng việc này nhưng nếu ứng dụng của bạn bắt buộc phải dùng foreign key constraints thì InnoDB là lựa chọn của bạn.
 
@@ -84,7 +84,7 @@ Do vậy transaction được dùng để tránh những trường hợp tương
 - Cuối cùng nếu bạn là người mới làm về MySQL (cũng như DB nói chung) thì bạn nên dùng MyISAM vì rằng nó đơn giản hơn InnoDB.
 
 
-###Tóm lại,
+####Tóm lại,
 -> Với 1 ứng dụng có tần suất đọc cao như trang tin tức,blog... thì bạn nên dùng MyISAM.
 -> Với ứng dụng có tần suất insert và update cao như: Diễn đàn, mạng xã hội.. thì bạn nên dùng InnoDB
 -> Bạn nên dùng MEMORY Storage Engine cho các table chứa dữ liệu tạm và thông tin phiên làm việc của người dùng (Session)
