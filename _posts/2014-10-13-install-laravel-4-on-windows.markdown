@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hướng dẫn cài đặt Laravel 4 trên windows"
-date:   2014-10-13 10:41:00
+date:   2014-09-13 10:41:00
 categories: php
 ---
 
@@ -9,7 +9,7 @@ categories: php
 -	PHP >= 5.4
 -	MCrypt PHP Extension
 
-####Cài đặt Web Server xampp:
+####Cài đặt gói Xampp:
 -	Ở đây mình sử dụng gói xampp Download Xampp for Windows
 	Link: `https://www.apachefriends.org/index.html`
 Sau khi cài đặt xampp, start 2 module Apache và MySQL
