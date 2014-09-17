@@ -71,7 +71,7 @@ Kết quả:
 > +--------------------+  
 > 3 rows in set (0.00 sec)  
 
-####3. Cài đặt php
+#####3. Cài đặt php
 Từ terminal gõ command:  
 ```
 ~$ sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
@@ -88,7 +88,7 @@ Kết quả:
 > Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies  
 > with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies   
 
-####4. Cài đặt PHP Module
+#####4. Cài đặt PHP Module
 Từ terminal gõ command:  
 ```
 ~$ apt-cache search php5-
@@ -165,7 +165,7 @@ Chọn một trong số các module để cài đặt, cài đặt bằng cách:
 ~$ sudo apt-get install <tên_module>
 ```  
 
-Kiểm tra kết quả:  
+#####Kiểm tra kết quả:  
 Tạo file info.php trong `/var/www/` với nội dung:  
 ```
 <?php  
