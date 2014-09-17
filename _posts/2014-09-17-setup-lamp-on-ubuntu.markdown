@@ -88,7 +88,7 @@ Kết quả:
 > Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies  
 > with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies   
 
-####4. Cài đặt mysql module
+####4. Cài đặt PHP Module
 Từ terminal gõ command:  
 ```
 ~$ apt-cache search php5-
