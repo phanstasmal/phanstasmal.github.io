@@ -84,12 +84,14 @@ MyISAM hỗ trợ full-text searches còn InnoDB thì không: Đây rõ ràng l�
 Cuối cùng nếu bạn là người mới làm về MySQL (cũng như DB nói chung) thì bạn nên dùng MyISAM vì rằng nó đơn giản hơn InnoDB.
 
 #####Tóm lại,
--> Với 1 ứng dụng có tần suất đọc cao như trang tin tức,blog... thì bạn nên dùng MyISAM.  
--> Với ứng dụng có tần suất insert và update cao như: Diễn đàn, mạng xã hội.. thì bạn nên dùng InnoDB  
--> Bạn nên dùng MEMORY Storage Engine cho các table chứa dữ liệu tạm và thông tin phiên làm việc của người dùng (Session)  
--> Việc chuyển đổi 1 table từ storage engine này sang storage engine khác sẽ diễn ra tương đối lâu nếu dữ liệu trên table lớn. Do đó cần kiên nhẫn.  
--------------------------------------------------------------------------------------------------------  
-[a] InnoDB utilizes hash indexes internally for its Adaptive Hash Index feature.  
+- Với 1 ứng dụng có tần suất đọc cao như trang tin tức,blog... thì bạn nên dùng MyISAM.  
+- Với ứng dụng có tần suất insert và update cao như: Diễn đàn, mạng xã hội.. thì bạn nên dùng InnoDB  
+- Bạn nên dùng MEMORY Storage Engine cho các table chứa dữ liệu tạm và thông tin phiên làm việc của người dùng (Session)  
+- Việc chuyển đổi 1 table từ storage engine này sang storage engine khác sẽ diễn ra tương đối lâu nếu dữ liệu trên table lớn. Do đó cần kiên nhẫn.
+
+------------------------------------------------------------------------------------------------------- 
+
+[a] InnoDB utilies hash indexes internally for its Adaptive Hash Index feature.  
 [b] InnoDB support for FULLTEXT indexes is available in MySQL 5.6.4 and higher.  
 [c] Compressed MyISAM tables are supported only when using the compressed row format. Tables using the compressed row format with MyISAM are read only.  
 [d] Compressed InnoDB tables require the InnoDB Barracuda file format.  
