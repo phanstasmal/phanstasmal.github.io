@@ -51,7 +51,7 @@ MEMORY sử dụng cơ chế table-level locking như MyISAM.
 Dung lượng của 1 bảng Storage Engine dạng MEMORY tối đa là bao nhiêu ?
 Nó phụ thuộc vào cấu hình thông số max_heap_table_size trong file my.cnf, mặc định 1 bảng kiểu MEMORY có dung lượng tối đa là 16MB. Nếu vượt quá bạn sẽ nhận được lỗi: Table xyz is full...
 
-######4. So sánh các đặc điểm của InnoDB vs MyISAM
+#####4. So sánh các đặc điểm của InnoDB vs MyISAM
 
 InnoDB hỗ trợ relationship (data integrity and foreign key constraints) còn MyISAM thì ko: Đa phần các open source đều không coi trọng việc này nhưng nếu ứng dụng của bạn bắt buộc phải dùng foreign key constraints thì InnoDB là lựa chọn của bạn.
 
