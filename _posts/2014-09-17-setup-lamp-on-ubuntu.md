@@ -7,14 +7,17 @@ categories: mysql
 
 #####1. Cài đặt Apache:  
 Mở terminal gõ command:
-{% highlight pycon %}
+
+```bash
 ~$ sudo apt-get update  
 ~$ sudo apt-get install apache2
-{% endhighlight %}
+```
+
 Kiểm tra version cài đặt:
-{% highlight pycon %}
+
+```bash
 ~$ apache2 -v
-{% endhighlight %}
+```
 
 Kết quả   
 
@@ -23,14 +26,17 @@ Kết quả
 
 #####2. Cài đặt MySQL:
 Từ terminal gõ command:  
-{% highlight pycon %}
+
+```bash
 ~$ sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
-{% endhighlight %}
+```
+
 trong quá trính cài đặt mysql-server sẽ hỏi bạn cấu hình password cho user: root, nhập password -> 0k  
-Sau khi quá trình cài đặt kết thúc, ta kiểm tra mysql vừa cài đặt:  
-{% highlight pycon %}
+Sau khi quá trình cài đặt kết thúc, ta kiểm tra mysql vừa cài đặt: 
+
+```bash
 ~$ mysql -hlocalhost -uroot -ppassword 
-{% endhighlight %}
+```
 
 Với:   
 
@@ -55,30 +61,36 @@ Kết quả:
 > mysql>  
 
 Từ mysql gõ command:  
-{% highlight sql %}
+
+```bash
 mysql> show databases;
-{% endhighlight %}
+```
 
 Kết quả:  
 
-> +--------------------+  
-> | Database           |  
-> +--------------------+  
-> | information_schema |  
-> | mysql              |  
-> | performance_schema |  
-> +--------------------+  
-> 3 rows in set (0.00 sec)  
+```sql
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| mysql              |  
+| performance_schema |  
++--------------------+  
+3 rows in set (0.00 sec)  
+```
 
 #####3. Cài đặt php
-Từ terminal gõ command:  
-{% highlight pycon %}
+Từ terminal gõ command: 
+
+```bash
 ~$ sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
-{% endhighlight %}
+```
+
 Kiểm tra version php5  
-{% highlight pycon %}
+
+```bash
 ~$ php5 -v
-{% endhighlight %}
+```
 
 Kết quả:  
 
@@ -89,9 +101,10 @@ Kết quả:
 
 #####4. Cài đặt PHP Module
 Từ terminal gõ command:  
-{% highlight pycon %}
+
+```bash
 ~$ apt-cache search php5-
-{% endhighlight %}
+```
 
 Kết quả:  
 
@@ -160,23 +173,30 @@ Kết quả:
 > php5-xhprof - Hierarchical Profiler for PHP5  
 
 Chọn một trong số các module để cài đặt, cài đặt bằng cách:  
-{% highlight pycon %}
+
+```bash
 ~$ sudo apt-get install <tên_module>
-{% endhighlight %}
+```
 
 #####Kiểm tra kết quả:  
 Tạo file info.php trong `/var/www/` với nội dung:  
-{% highlight php %}
+
+```bash
 <?php  
 phpinfo();  
 ?>  
-{% endhighlight %}
+```
+
 Restart lại server apache2  
-{% highlight pycon %}
+
+```bash
 ~$ sudo service apache2 restart  
-{% endhighlight %}
+```
+
 Mở trình duyệt với 
-{% highlight html %}
+
+```bash
 http://127.0.0.1/info.php 
-{% endhighlight %}
+```
+
 xem kết quả.

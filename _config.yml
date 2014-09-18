@@ -11,7 +11,8 @@ twitter_username: phanstasmal
 github_username:  phanstasmal
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
+highlighter: pygments
 
 image_avatar: https://avatars1.githubusercontent.com/u/7008520?s=460
