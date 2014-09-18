@@ -6,15 +6,12 @@ categories: mysql
 ---
 
 #####1. Cài đặt Apache:  
-Mở terminal gõ command: 
-
+Mở terminal gõ command:
 {% highlight pycon %}
 ~$ sudo apt-get update  
 ~$ sudo apt-get install apache2
 {% endhighlight %}
-
-Kiểm tra version cài đặt:  
-
+Kiểm tra version cài đặt:
 {% highlight pycon %}
 ~$ apache2 -v
 {% endhighlight %}
