@@ -10,5 +10,18 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
     <script type="text/javascript" src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
-    
+
+    <!-- Hightlight -->
+    <link rel="stylesheet" title="Default" href="{{ "/libs/highlight/styles/default.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" title="Dark" href="{{ "/libs/highlight/styles/dark.css" | prepend: site.baseurl }}">
+    <script src="{{ "/libs/highlight/highlight.pack.js" | prepend: site.baseurl }}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+      hljs.configure({useBR: false});
+    });
+    </script>
 </head>

@@ -21,4 +21,13 @@ layout: default
   </article>
   <div class="fb-comments" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-width="600" data-numposts="10" data-colorscheme="light"></div>
 
+  <!-- Hightlight -->
+    <link rel="stylesheet" href="{{ "/libs/hlsnippet/jquery.snippet.css" | prepend: site.baseurl }}">
+    <script src="{{ "/libs/hlsnippet/jquery.snippet.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $(document).ready(function() {
+      $('code').snippet("html");
+    });
+    </script>
+
 </div>
